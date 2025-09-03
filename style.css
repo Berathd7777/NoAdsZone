@@ -88,7 +88,7 @@ body.no-scroll { overflow: hidden; }
 
 /* Banner Section */
 .banner-section { padding:80px 24px; background:var(--md-surface-variant); border-top: 1px solid var(--md-outline-variant); }
-.section-title.compact { font-size:32px; margin-bottom:32px; text-align: center;}
+.section-title.compact { font-size:32px; margin-bottom:20px; text-align: center;}
 .banner-generator { max-width: 500px; margin: 0 auto; background:var(--md-surface); border-radius:28px; padding:32px; box-shadow:var(--md-elevation-2); border:1px solid var(--md-outline-variant); }
 .form-group { margin-bottom:24px; }
 .form-group label { display:block; font-weight:500; margin-bottom:8px; color: var(--md-on-surface-variant); }
