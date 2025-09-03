@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let supportedLangs = [];
 
     // Yeni bir dil eklemek için sadece bu listeyi güncelleyin.
-    // 'code', /locales/ klasöründeki dosya adıyla eşleşmelidir (örn: de.json).
-    // 'name', menüde görünecek addır.
     const potentialLanguages = [
         { code: 'tr', name: 'Türkçe' },
         { code: 'en', name: 'English' },
-        // Örnek: Almanca eklemek için buraya { code: 'de', name: 'Deutsch' } ekleyin
+        { code: 'de', name: 'Deutsch' },
+        { code: 'fr', name: 'Français' },
+        { code: 'es', name: 'Español' },
+        { code: 'pt', name: 'Português' }
     ];
     
     const bannerSizeSelect = document.getElementById('bannerSize');
@@ -29,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- i18n & Language Logic ---
 
-    // Mevcut dil dosyalarını kontrol edip menüyü oluşturan fonksiyon
     const discoverAndSetupLanguages = async () => {
         const fetchPromises = potentialLanguages.map(lang => 
             fetch(`locales/${lang.code}.json`)
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         supportedLangs = availableLanguages.map(lang => lang.code);
         
-        langDropdown.innerHTML = ''; // Menüyü temizle
+        langDropdown.innerHTML = '';
         availableLanguages.forEach(lang => {
             const item = document.createElement('button');
             item.className = 'lang-dropdown-item';
@@ -82,8 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
         localStorage.setItem('user-lang', lang);
 
-        const selectedLang = potentialLanguages.find(l => l.code === lang);
-        if (selectedLang) currentLangText.textContent = selectedLang.name.substring(0,2).toUpperCase();
+        // -- DÜZELTME BURADA --
+        // Ana buton metnini dilin tam adından değil, standart kodundan alıyor.
+        currentLangText.textContent = lang.toUpperCase();
         
         document.querySelectorAll('.lang-dropdown-item').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
