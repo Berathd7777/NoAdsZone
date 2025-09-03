@@ -26,10 +26,18 @@
                         <li><a href="https://github.com/Berathd7777/NoAdsZone" target="_blank" data-i18n-key="navGithub">Github</a></li>
                     </ul>
                 </nav>
-                <div class="lang-switcher">
-                    <button class="lang-btn" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
+                
+                <div class="lang-popup" id="lang-popup">
+                    <button class="lang-popup-button" id="lang-popup-button">
+                        <span class="material-icons-outlined">language</span>
+                        <span id="current-lang-text">TR</span>
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <!-- Dil seçenekleri buraya dinamik olarak eklenecek -->
+                    </div>
                 </div>
+
                 <button class="burger-menu-btn" id="burger-menu-btn">
                     <span class="material-icons-outlined">menu</span>
                 </button>
@@ -50,7 +58,6 @@
     </div>
     <div class="overlay" id="overlay"></div>
 
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content fade-in-up">
@@ -68,20 +75,17 @@
         <div class="container">
             <h2 class="section-title" data-i18n-key="whySectionTitle">Neden NoAdsZone?</h2>
             <p class="section-subtitle" data-i18n-key="whySectionSubtitle">Modern internetin en büyük sorunlarından biri olan reklam kirliliğine karşı...</p>
-            
             <div class="info-cards">
                 <div class="info-card fade-in-up">
                     <div class="info-card-icon"><span class="material-icons-outlined">speed</span></div>
                     <h3 data-i18n-key="feature1Title">Daha Hızlı İnternet</h3>
                     <p data-i18n-key="feature1Text">Reklamlar sayfa yükleme sürelerini ciddi oranda artırır...</p>
                 </div>
-                
                 <div class="info-card fade-in-up">
                     <div class="info-card-icon"><span class="material-icons-outlined">security</span></div>
                     <h3 data-i18n-key="feature2Title">Gizlilik Koruması</h3>
                     <p data-i18n-key="feature2Text">Reklam ağları sürekli olarak kullanıcı verilerini toplar...</p>
                 </div>
-                
                 <div class="info-card fade-in-up">
                     <div class="info-card-icon"><span class="material-icons-outlined">psychology</span></div>
                     <h3 data-i18n-key="feature3Title">Daha İyi Odaklanma</h3>
@@ -95,7 +99,6 @@
     <section class="banner-section" id="support">
         <div class="container">
             <h2 class="section-title compact" data-i18n-key="bannerSectionTitle">Destekçi Banner'ı Oluştur</h2>
-
             <div class="banner-generator">
                 <div class="form-group">
                     <label for="bannerSize" data-i18n-key="bannerSizeLabel">Banner Boyutu</label>
@@ -105,12 +108,10 @@
                         <option value="large" data-i18n-key="bannerSizeLarge">Büyük (468x120)</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="bannerColor" data-i18n-key="bannerColorLabel">Banner Rengi</label>
                     <input type="color" id="bannerColor" value="#6750A4">
                 </div>
-
                 <div class="banner-preview">
                     <h4 data-i18n-key="bannerPreviewTitle">Banner Önizleme</h4>
                     <a href="https://noadszone.netlify.app" target="_blank" class="generated-banner" id="bannerPreview">
@@ -118,7 +119,6 @@
                         NoAdsZone
                     </a>
                 </div>
-
                 <button id="copyCodeBtn" class="cta-button copy-button" data-i18n-key="copyCodeButton">Kodu Kopyala</button>
             </div>
         </div>
@@ -146,4 +146,4 @@
 
     <script src="script.js"></script>
 </body>
-                      </html>
+</html>
