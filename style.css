@@ -16,6 +16,11 @@
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
+/* Dokunma vurgu rengini kaldır */
+a, button, select, input {
+    -webkit-tap-highlight-color: transparent;
+    outline: none; /* Odaklanma anındaki dış çerçeveyi de kaldırabilir, ancak erişilebilirlik için dikkatli kullanın */
+}
 html { scroll-behavior: smooth; }
 body { font-family:'Inter',sans-serif; background:var(--md-surface); color:var(--md-on-surface); line-height:1.6; overflow-x:hidden; }
 body.no-scroll { overflow: hidden; }
