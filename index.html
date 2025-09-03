@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-key="siteTitle">NoAdsZone - Reklamsız Daha İyi Bir Dünya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="pageHeader">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="material-icons-outlined">block</span>
+                NoAdsZone
+            </a>
+            <div class="header-right">
+                <nav class="desktop-nav">
+                    <ul class="nav-menu">
+                        <li><a href="#home" data-i18n-key="navHome">Ana Sayfa</a></li>
+                        <li><a href="#about" data-i18n-key="navAbout">Hakkında</a></li>
+                        <li><a href="#support" data-i18n-key="navSupport">Destekle</a></li>
+                        <li><a href="#contact" data-i18n-key="navContact">İletişim</a></li>
+                        <li><a href="https://github.com/Berathd7777/NoAdsZone" target="_blank" data-i18n-key="navGithub">Github</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="burger-menu-btn" id="burger-menu-btn">
+                    <span class="material-icons-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="#home" data-i18n-key="navHome">Ana Sayfa</a></li>
+            <li><a href="#about" data-i18n-key="navAbout">Hakkında</a></li>
+            <li><a href="#support" data-i18n-key="navSupport">Destekle</a></li>
+            <li><a href="#contact" data-i18n-key="navContact">İletişim</a></li>
+            <li><a href="https://github.com/Berathd7777/NoAdsZone" target="_blank" data-i18n-key="navGithub">Github</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <h1 data-i18n-key="heroTitle">Reklamsız Daha İyi Bir Dünya</h1>
+            <p class="hero-subtitle" data-i18n-key="heroSubtitle">İnternetin özgür ve temiz kalması için birlikte çalışıyoruz...</p>
+            <a href="#support" class="cta-button">
+                <span class="material-icons-outlined">favorite</span>
+                <span data-i18n-key="supportButton">Destek Ol</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n-key="whySectionTitle">Neden NoAdsZone?</h2>
+            <p class="section-subtitle" data-i18n-key="whySectionSubtitle">Modern internetin en büyük sorunlarından biri olan reklam kirliliğine karşı...</p>
+            
+            <div class="info-cards">
+                <div class="info-card fade-in-up">
+                    <div class="info-card-icon"><span class="material-icons-outlined">speed</span></div>
+                    <h3 data-i18n-key="feature1Title">Daha Hızlı İnternet</h3>
+                    <p data-i18n-key="feature1Text">Reklamlar sayfa yükleme sürelerini ciddi oranda artırır...</p>
+                </div>
+                
+                <div class="info-card fade-in-up">
+                    <div class="info-card-icon"><span class="material-icons-outlined">security</span></div>
+                    <h3 data-i18n-key="feature2Title">Gizlilik Koruması</h3>
+                    <p data-i18n-key="feature2Text">Reklam ağları sürekli olarak kullanıcı verilerini toplar...</p>
+                </div>
+                
+                <div class="info-card fade-in-up">
+                    <div class="info-card-icon"><span class="material-icons-outlined">psychology</span></div>
+                    <h3 data-i18n-key="feature3Title">Daha İyi Odaklanma</h3>
+                    <p data-i18n-key="feature3Text">Dikkat dağıtıcı reklamlar olmadan içeriğe odaklanabilir...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section" id="support">
+        <div class="container">
+            <h2 class="section-title compact" data-i18n-key="bannerSectionTitle">Destekçi Banner'ı Oluştur</h2>
+
+            <div class="banner-generator">
+                <div class="form-group">
+                    <label for="bannerSize" data-i18n-key="bannerSizeLabel">Banner Boyutu</label>
+                    <select id="bannerSize">
+                        <option value="small" data-i18n-key="bannerSizeSmall">Küçük (200x60)</option>
+                        <option value="medium" selected data-i18n-key="bannerSizeMedium">Orta (300x100)</option>
+                        <option value="large" data-i18n-key="bannerSizeLarge">Büyük (468x120)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bannerColor" data-i18n-key="bannerColorLabel">Banner Rengi</label>
+                    <input type="color" id="bannerColor" value="#6750A4">
+                </div>
+
+                <div class="banner-preview">
+                    <h4 data-i18n-key="bannerPreviewTitle">Banner Önizleme</h4>
+                    <a href="https://noadszone.netlify.app" target="_blank" class="generated-banner" id="bannerPreview">
+                        <span class="material-icons-outlined">block</span>
+                        NoAdsZone
+                    </a>
+                </div>
+
+                <button id="copyCodeBtn" class="cta-button copy-button" data-i18n-key="copyCodeButton">Kodu Kopyala</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="material-icons-outlined">block</span>
+                NoAdsZone
+            </div>
+            <p class="footer-text" data-i18n-key="footerText">Reklamsız, daha temiz ve özgür bir internet için...</p>
+            <div class="footer-links">
+                <a href="#home" data-i18n-key="navHome">Ana Sayfa</a>
+                <a href="#about" data-i18n-key="navAbout">Hakkında</a>
+                <a href="#support" data-i18n-key="navSupport">Destekle</a>
+                <a href="mailto:hasanberatkaylan@gmail.com" data-i18n-key="navContact">İletişim</a>
+            </div>
+            <p class="copyright" data-i18n-key="copyright">
+                © 2025 NoAdsZone. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
